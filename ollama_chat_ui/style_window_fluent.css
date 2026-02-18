@@ -1,0 +1,172 @@
+/* ------------------------------
+   Windows Fluent (Windows 11) Theme
+------------------------------ */
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1a1a1a;
+}
+
+/* Title */
+h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Chat container */
+#chat {
+    width: 900px;
+    height: 480px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+/* Message bubbles (Fluent-style cards) */
+.bubble {
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* User message */
+.user {
+    align-self: flex-end;
+    background: #cfe4ff;
+    border-color: #a8cfff;
+}
+
+/* AI message */
+.ai {
+    align-self: flex-start;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: none;
+    margin-top: 8px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+    background: #4a6cff;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: .2; }
+    20% { opacity: 1; }
+    100% { opacity: .2; }
+}
+
+/* Controls */
+#controls {
+    width: 900px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Model dropdown */
+#model {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid #c7c7c7;
+    background: white;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Input box */
+#input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #c7c7c7;
+    background: white;
+    font-size: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Buttons */
+button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Fluent-style hover lift */
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Send button */
+#send {
+    background: #0067c0;
+    color: white;
+}
+
+#send:hover {
+    background: #0053a0;
+}
+
+/* Clear button */
+#clear {
+    background: #d83b01;
+    color: white;
+}
+
+#clear:hover {
+    background: #b83200;
+}
+
+/* Model info box */
+.model-info-box {
+    width: 900px;
+    margin-top: 20px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-left: 4px solid #0067c0;
+    padding: 16px;
+    border-radius: 12px;
+    color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}

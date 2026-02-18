@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#chat {
+    width: 100%;
+    height: 450px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    margin: 8px 0;
+    border-radius: 12px;
+    line-height: 1.4;
+    font-size: 15px;
+    display: inline-block;
+    white-space: pre-wrap;
+}
+
+.user {
+    background-color: #DCF8C6;
+    align-self: flex-end;
+}
+
+.ai {
+    background-color: #F1F0F0;
+    align-self: flex-start;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* spacing between items */
+    width: 100%;
+}
+
+#model {
+    padding: 1px;
+    font-size: 14px;
+    width: 150px;
+}
+
+.box {
+    display: inline-block;
+    flex-direction: row;
+    align-items: center;
+}
+
+#model-info {
+    font-size: 12px;
+    color: #555;
+    margin-left: 10px;
+}
+
+#input {
+    flex: 1; /* input expands to fill space */
+    min-width: 0; /* prevents overflow */
+}
+
+#send, #clear {
+    flex-shrink: 0;
+}
+
+.typing-indicator {
+    display: none;
+    padding: 8px 12px;
+    background: #eee;
+    border-radius: 12px;
+    width: 60px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background: #555;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: .2; }
+    20% { opacity: 1; }
+    100% { opacity: .2; }
+}

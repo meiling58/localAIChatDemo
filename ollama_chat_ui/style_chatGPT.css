@@ -1,0 +1,158 @@
+/* ------------------------------
+   ChatGPT‑Lite Theme
+------------------------------ */
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #f7f7f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+/* Chat container */
+#chat {
+    width: 850px;
+    height: 480px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Message bubbles */
+.bubble {
+    max-width: 75%;
+    padding: 14px 18px;
+    border-radius: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    background: #f2f2f2;
+    color: #222;
+}
+
+/* User message */
+.user {
+    align-self: flex-end;
+    background: #d8f5d0;
+}
+
+/* AI message */
+.ai {
+    align-self: flex-start;
+    background: #f7f7f8;
+    border: 1px solid #e5e5e5;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: none;
+    margin-top: 8px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+    background: #888;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: .2; }
+    20% { opacity: 1; }
+    100% { opacity: .2; }
+}
+
+/* Controls */
+#controls {
+    width: 850px;
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Model dropdown */
+#model {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 14px;
+}
+
+/* Input box */
+#input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    background: white;
+    font-size: 15px;
+}
+
+/* Buttons */
+button {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#send {
+    background: #4a6cff;
+    color: white;
+}
+
+#send:hover {
+    background: #3d57d1;
+}
+
+#clear {
+    background: #ff6b6b;
+    color: white;
+}
+
+#clear:hover {
+    background: #e85a5a;
+}
+
+/* Model info box */
+.model-info-box {
+    width: 850px;
+    margin-top: 15px;
+    background: #ffffff;
+    border-left: 4px solid #4a6cff;
+    padding: 14px;
+    border-radius: 10px;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}

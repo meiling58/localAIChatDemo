@@ -1,0 +1,150 @@
+/* ------------------------------
+   Discord‑Style Theme
+------------------------------ */
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #2b2d31;
+    color: #e3e5e8;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #f2f3f5;
+    margin-bottom: 15px;
+}
+
+/* Chat container */
+#chat {
+    height: 480px;
+    background: #313338;
+    border: 1px solid #1e1f22;
+    border-radius: 8px;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Message blocks (Discord style) */
+.bubble {
+    padding: 10px 14px;
+    border-radius: 6px;
+    max-width: 90%;
+    font-size: 15px;
+    line-height: 1.45;
+    background: #383a40;
+    border: 1px solid #2e3035;
+}
+
+.bubble:hover {
+    background: #3f4147;
+}
+
+/* User message */
+.user {
+    align-self: flex-end;
+    background: #5865f2;
+    border-color: #4752c4;
+    color: white;
+}
+
+/* AI message */
+.ai {
+    align-self: flex-start;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: none;
+    margin-top: 8px;
+}
+
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    margin: 0 3px;
+    background: #b5bac1;
+    border-radius: 50%;
+    display: inline-block;
+    animation: blink 1.4s infinite both;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes blink {
+    0% { opacity: .2; }
+    20% { opacity: 1; }
+    100% { opacity: .2; }
+}
+
+/* Controls */
+#controls {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Model dropdown */
+#model {
+    background: #1e1f22;
+    color: #e3e5e8;
+    border: 1px solid #3a3c41;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Input box */
+#input {
+    flex: 1;
+    background: #1e1f22;
+    color: #e3e5e8;
+    border: 1px solid #3a3c41;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+}
+
+#send {
+    background: #5865f2;
+}
+
+#send:hover {
+    background: #4752c4;
+}
+
+#clear {
+    background: #d83c3e;
+}
+
+#clear:hover {
+    background: #b73536;
+}
+
+/* Model info box */
+.model-info-box {
+    margin-top: 15px;
+    background: #1e1f22;
+    border-left: 4px solid #5865f2;
+    padding: 12px;
+    border-radius: 6px;
+    color: #d1d2d5;
+}
