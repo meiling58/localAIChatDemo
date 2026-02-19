@@ -1,61 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ollama Chat UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local AI Chat</title>
 
-    <!-- External CSS -->
-<!--    <link rel="stylesheet" href="style.css">-->
-<!--    <link rel="stylesheet" href="style_v1.css">-->
-<!--    <link rel="stylesheet" href="style_window_fluent.css">-->
-<!--    <link rel="stylesheet" href="style_chatGPT.css">-->
-<!--    <link rel="stylesheet" href="style_discord.css">-->
-    <link rel="stylesheet" href="style_imessage.css">
+    <!-- Load CSS from FastAPI static folder -->
+    <!-- <link rel="stylesheet" href="/static/style.css"> -->
+    <link rel="stylesheet" href="/static/style_imessage.css">
 
+
+    <!-- Highlight.js (optional but recommended) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- Markdown parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
 
-<h2>Local AI Chat (Ollama + FastAPI)</h2>
+    <h2>Local AI Chat</h2>
 
-<!-- Chat messages -->
-<div id="chat"></div>
+    <!-- Chat container -->
+    <div id="chat"></div>
 
-<!-- Typing indicator -->
-<div id="typing" class="typing-indicator">
-    <span></span><span></span><span></span>
-</div>
+    <!-- Typing indicator -->
+    <div id="typing" class="typing-indicator">
+        <span></span><span></span><span></span>
+    </div>
 
-<br>
+    <!-- Controls -->
+    <div id="controls">
+        <select id="model"></select>
+        <input id="input" type="text" placeholder="Type your message...">
+        <button id="send">Send</button>
+        <button id="clear">Clear</button>
+    </div>
 
-<!-- Controls -->
-<div id="controls">
-
-    <!-- Model selector (auto-filled by chat.js) -->
-    <select id="model"></select>
-
-    <!-- Input + buttons -->
-    <input id="input" type="text" placeholder="Type your message...">
-    <button id="send">Send</button>
-    <button id="clear">Clear Chat</button>
-</div>
-
-<div>
     <!-- Model info box -->
-    <div id="model-info" class="box model-info-box"></div>
-<!--    <div class="box"> <p> this is test box </p> </div>-->
-</div>
+    <div id="model-info" class="model-info-box"></div>
 
-<!-- Markdown parser -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<!-- Syntax highlighting -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-
-<!-- App logic -->
-<script src="chat.js"></script>
+    <!-- Load JS from FastAPI static folder -->
+    <script src="/static/chat.js"></script>
 
 </body>
 </html>

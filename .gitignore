@@ -18,3 +18,4 @@ target/
 *.settings.json
 .vscode/
 
+venv/

@@ -2,6 +2,8 @@
 This is a local, multi‑turn, streaming AI chat with model switching (including phi3, mistral, qwen3 and llama3) 
 and a polished UI(can switch to chatGPT, discord, window-fluent and iMessage).
 
+![Local AI Chat](https://github.com/meiling58/localAIChatDemo/tree/main/ollama_chat_ui/localAIchat.png)
+
 <details><summary>Project Structure</summary>
 
 ```batch
