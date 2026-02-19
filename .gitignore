@@ -1,0 +1,20 @@
+# PyCharm-specific files
+.idea/
+*.iml
+
+# Generated code
+__pycache__/
+
+# Temporary files
+*.pyc
+*.pkl
+
+# Build and deployment artifacts
+build/
+target/
+
+# VSCode-specific files
+*.code-snippets
+*.settings.json
+.vscode/
+
